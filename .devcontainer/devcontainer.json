@@ -1,0 +1,14 @@
+{
+    "name": "Rasa Bot Dev",
+    "dockerComposeFile": ["../docker-compose.yml"],
+    "service": "rasa",
+    "workspaceFolder": "/app",
+    "extensions": [
+      "ms-python.python",
+      "ms-azuretools.vscode-docker"
+    ],
+    "settings": {
+      "python.pythonPath": "/usr/local/bin/python"
+    },
+    "forwardPorts": [5005, 5055]
+  }

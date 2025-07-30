@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  rasa:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - ./:/app
+    ports:
+      - "5005:5005"
+    command: ["rasa", "run", "--enable-api", "--cors", "*"]
+  action_server:
+    build: .
+    volumes:
+      - ./:/app
+    ports:
+      - "5055:5055"
+    command: ["rasa", "run", "actions"]
